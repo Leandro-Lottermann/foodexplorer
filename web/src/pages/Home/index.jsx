@@ -5,12 +5,15 @@ import imgTest from "../../assets/Mask-group-1.png";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { SwiperCustom } from "../../components/SwiperCustom";
+import { SideMenu } from "../../components/SideMenu";
+import { useState } from "react";
 
 
 
 
 
 export function Home() {
+  const [ isOpenMenu, setOpenMenu ] = useState(false)
   const dishes = [
     {id: 1, name: "Salada de Atum", description: "Delecioso atum temperado com alho e óleo",  img:  imgTest, price: 22.59, favorited: false},
     {id: 2, name: "Salada de Atum", description: "Delecioso atum temperado com alho e óleo",  img:  imgTest, price: 22.59, favorited: false},
@@ -29,8 +32,9 @@ export function Home() {
   ]
   return (
     <Container>
-      <Header />
-      <Content>
+      <Header setOpenMenu={() => setOpenMenu(true)}/>
+      {isOpenMenu && <SideMenu />}
+      {!isOpenMenu && <Content>
 
         <Banner>
           <img src={imgBanner} alt="Imagem do Banner" />
@@ -44,7 +48,7 @@ export function Home() {
           <SwiperCustom title="Refeições" dishes={dishes}/>
           <SwiperCustom title="Pratos principais" dishes={dishes}/>
         </div>
-      </Content>
+      </Content>}
 
       <Footer />
     </Container>

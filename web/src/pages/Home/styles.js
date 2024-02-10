@@ -3,6 +3,7 @@ import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakPoints";
 
 export const Container = styled.div`
   height: 100vh;
+  position: relative;
 
   display: grid;
   grid-template-rows: 114px auto 77px;
@@ -44,6 +45,7 @@ export const Banner = styled.span`
   position: relative;
   height: 120px;
   width: 100%;
+  
 
   display: flex;
   flex-direction: column;
@@ -61,6 +63,7 @@ export const Banner = styled.span`
   }
 
   > section {
+    
     align-self: flex-end;
     font-family: Poppins;
     color: ${({ theme }) => theme.COLORS.LIGHT_300};

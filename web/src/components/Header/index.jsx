@@ -1,17 +1,20 @@
 // import { Search } from "../Search";
-import { Container, Cart, Search  } from "./styles";
+import { Container, Cart, SearchContainer  } from "./styles";
+import { Search } from "../Search";
 import Logo from "../../assets/blue-logo.svg";
 import { List, Receipt, MagnifyingGlass, SignOut } from "@phosphor-icons/react";
 import { Button } from "../Button";
 
-export function Header({ requests = 0 }) {
+
+export function Header({ requests = 0, setOpenMenu }) {
   const isAdmin = true;
   const count = 0;
 
 
   return (
     <Container>
-      <List size={24} />
+      
+      <List size={24} onClick={() => {setOpenMenu()}}/>
       <a>
         <div>
           <img src={Logo} />
@@ -21,11 +24,10 @@ export function Header({ requests = 0 }) {
         {isAdmin && <p>admin</p>}
       </a>
 
-      <Search>
-        <MagnifyingGlass size={24} />
-        <input type="text" placeholder="Busque por pratos ou ingredientes" />
-      </Search>
-
+<SearchContainer>
+  <Search />
+</SearchContainer>
+      
       <div>
         {!isAdmin && (
           <Cart>
