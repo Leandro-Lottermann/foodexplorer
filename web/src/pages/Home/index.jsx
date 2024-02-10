@@ -1,6 +1,6 @@
 import { Container, Content, Banner } from "./styles";
 
-import imgBanner from "../../assets/img-banner.png";
+import imgBanner from "../../assets/pngegg.png";
 import imgTest from "../../assets/Mask-group-1.png";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";

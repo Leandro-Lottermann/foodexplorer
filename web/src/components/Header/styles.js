@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakPoints";
+import { SignOut } from "@phosphor-icons/react";
 
 
 export const Container = styled.header`
@@ -15,6 +16,10 @@ export const Container = styled.header`
 
 
  > button {
+  display: none;
+ }
+
+ > svg:last-child {
   display: none;
  }
 
@@ -58,7 +63,9 @@ export const Container = styled.header`
    > svg:first-child {
       display: none;
     }
-
+> svg:last-child {
+  display: block;
+ }
 
 
     > a {

@@ -5,7 +5,7 @@ import { List, Receipt, MagnifyingGlass, SignOut } from "@phosphor-icons/react";
 import { Button } from "../Button";
 
 export function Header({ requests = 0 }) {
-  const isAdmin = false;
+  const isAdmin = true;
   const count = 0;
 
 

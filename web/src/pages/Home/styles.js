@@ -14,6 +14,7 @@ export const Container = styled.div`
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     grid-template-rows: 104px auto 77px;
+    
   }
 `;
 
@@ -31,6 +32,11 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    padding: 0 124px;
+    
   }
 `;
 
@@ -60,9 +66,33 @@ export const Banner = styled.span`
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
     max-width: 215px;
     font-size: 0.75rem;
+    z-index: 1;
     > h1 {
       font-size: 1.125rem;
       font-weight: 600;
     }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    height: 260px;
+    margin-top: 164px;
+
+    > img {
+      width: 632px;
+      left: -100px;
+    }
+
+    > section {
+    width: auto;
+    max-width: none;
+
+    font-size: 1rem;
+    margin-right: 100px;
+    > h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+  }
+    
   }
 `;
